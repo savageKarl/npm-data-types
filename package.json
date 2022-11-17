@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "rollup打包ts模板",
   "main": "dist/index.js",
+  "module": "./dist/index.mjs",
   "miniprogram": "dist",
   "files": [
     "/dist",
@@ -10,21 +11,8 @@
   ],
   "scripts": {
     "dev": "ts-node ./example/index.ts",
-    "build": "rollup -c rollup.config.js"
-  },
-  "author": {
-    "name": "savage",
-    "email": "2443005004@qq.com",
-    "url": "https://github.com/savage181855/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/savage181855/utils"
-  },
-  "homepage": "https://github.com/savage181855/utils",
-  "bugs": {
-    "url": "https://github.com/savage181855/utils",
-    "email": "2443005004@qq.com"
+    "build": "rollup -c rollup.config.js",
+    "push": "npm publish --access public"
   },
   "license": "GPL-3.0",
   "devDependencies": {
