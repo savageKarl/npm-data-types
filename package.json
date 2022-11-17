@@ -1,7 +1,7 @@
 {
   "name": "@savage181855/data-types",
   "version": "1.0.1",
-  "description": "rollup打包ts模板",
+  "description": "一个用于判断js变量类型的库",
   "main": "dist/index.js",
   "miniprogram": "dist",
   "files": [
