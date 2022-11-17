@@ -1,6 +1,6 @@
 {
   "name": "@savage181855/data-types",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "一个用于判断js变量类型的库",
   "main": "dist/index.js",
   "module": "./dist/index.mjs",
