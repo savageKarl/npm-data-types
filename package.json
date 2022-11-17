@@ -1,19 +1,17 @@
 {
   "name": "@savage181855/utils",
   "version": "1.0.0",
-  "description": "js工具库",
+  "description": "rollup打包ts模板",
   "main": "dist/index.js",
   "miniprogram": "dist",
   "files": [
     "/dist",
     "readme.md"
   ],
-  "types": "module",
   "scripts": {
     "dev": "ts-node ./example/index.ts",
     "build": "rollup -c rollup.config.js"
   },
-  "type": "commonjs",
   "author": {
     "name": "savage",
     "email": "2443005004@qq.com",
@@ -32,6 +30,8 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.0",
     "rollup": "^3.2.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "ts-node": "^10.9.1",

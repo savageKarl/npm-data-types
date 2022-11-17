@@ -1,1 +1,3 @@
-console.debug('fucking world')
+export function say() {
+  console.debug("hello, world");
+}
