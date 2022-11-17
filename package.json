@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "dev": "ts-node ./example/index.ts",
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "push": "npm publish --access public"
   },
   "author": {
     "name": "savage",
