@@ -1,6 +1,6 @@
 {
   "name": "@savage181855/data-types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "一个用于判断js变量类型的库",
   "main": "dist/index.js",
   "module": "./dist/index.mjs",
@@ -21,11 +21,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/savage181855/utils"
+    "url": "https://github.com/savage181855/data-types"
   },
-  "homepage": "https://github.com/savage181855/utils",
+  "homepage": "https://github.com/savage181855/data-types",
   "bugs": {
-    "url": "https://github.com/savage181855/utils",
+    "url": "https://github.com/savage181855/data-types",
     "email": "2443005004@qq.com"
   },
   "license": "GPL-3.0",
