@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "rollup打包ts模板",
   "main": "dist/index.js",
+  "module": "./dist/index.mjs",
   "miniprogram": "dist",
   "files": [
     "/dist",
@@ -10,7 +11,8 @@
   ],
   "scripts": {
     "dev": "ts-node ./example/index.ts",
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "push": "npm publish --access public"
   },
   "author": {
     "name": "savage",

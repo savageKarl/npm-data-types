@@ -7,8 +7,13 @@ module.exports = {
   input: "src/index.ts", // pack entry
   output: [
     {
-      file: "dist/index.js", // ouput file
+      file: "dist/index.mjs", // ouput file
       format: "esm", // file module specifications
+      sourcemap: true,
+    },
+    {
+      file: "dist/index.js", // ouput file
+      format: "cjs", // file module specifications
       sourcemap: true,
     },
   ],
