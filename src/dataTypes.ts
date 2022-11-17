@@ -40,6 +40,7 @@ export const dataTypes = (function () {
     "isWeakMap",
     "isWeakRef",
     "isUndefined",
+    "isArguments",
   ] as const;
 
   const o = {} as TupleToObject<typeof types, (arg: any) => boolean>;
@@ -53,4 +54,3 @@ export const dataTypes = (function () {
 
   return o;
 })();
-

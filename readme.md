@@ -2,7 +2,6 @@
 
 > 一个用于判断`javascript`变量类型的库，简单，便捷，开箱即用，提供了很多方法用于使用。
 
-
 # 安装
 
 ```
@@ -32,3 +31,42 @@ console.log(dataTypes.isObject({}));
 
 console.log(dataTypes.isMap(new Map()));
 ```
+
+## 所有 api
+- isString
+- isNumber
+- isBoolean
+- isArray
+- isNull
+- isArrayBuffer
+- isBigInt
+- isBigInt64Array
+- isBigUint64Array
+- isDataView
+- isDate
+- isError
+- isEvalError
+- isFloat32Array
+- isFloat64Array
+- isFunction
+- isGenerator
+- isInt16Array
+- isInt32Array
+- isMap
+- isInt8Array
+- isObject
+- isPromise
+- isRegExp
+- isSet
+- isSymbol
+- isSyntaxError
+- isTypeError
+- isUint16Array
+- isUint32Array
+- isUint8Array
+- isUint8ClampedArray
+- isURIError
+- isWeakMap
+- isWeakRef
+- isUndefined
+- isArguments
