@@ -1,3 +1,1 @@
-export function say() {
-  console.debug("hello, world");
-}
+export { dataTypes } from "./dataTypes";

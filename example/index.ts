@@ -1,3 +1,2 @@
-import { say } from "../src";
+import "../src/dataTypes";
 
-say();
