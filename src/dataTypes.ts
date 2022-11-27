@@ -43,14 +43,14 @@ export const dataTypes = (function () {
     "isArguments",
   ] as const;
 
-  const o = {} as TupleToObject<typeof types, (arg: any) => boolean>;
+  const obj = {} as TupleToObject<typeof types, (arg: any) => boolean>;
 
   types.forEach((item) => {
-    o[item] = function (v) {
-      const t = Object.prototype.toString.call(v).slice(8, -1);
-      return item.slice(2) === (v?.constructor.name || t);
+    obj[item] = function (v) {
+      const typeStr = Object.prototype.toString.call(v).slice(8, -1);
+      return item.slice(2) === typeStr;
     };
   });
 
-  return o;
+  return obj;
 })();
