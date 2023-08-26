@@ -1,51 +1,13 @@
+import { typeList } from "./typeList";
+
 type TupleToObject<T extends readonly any[], F> = {
   [K in T[number]]: F;
 };
 
 export const dataTypes = (function () {
-  const types = [
-    "isString",
-    "isNumber",
-    "isBoolean",
-    "isArray",
-    "isNull",
-    "isArrayBuffer",
-    "isBigInt",
-    "isBigInt64Array",
-    "isBigUint64Array",
-    "isDataView",
-    "isDate",
-    "isError",
-    "isEvalError",
-    "isFloat32Array",
-    "isFloat64Array",
-    "isFunction",
-    "isGenerator",
-    "isInt16Array",
-    "isInt32Array",
-    "isMap",
-    "isInt8Array",
-    "isObject",
-    "isPromise",
-    "isRegExp",
-    "isSet",
-    "isSymbol",
-    "isSyntaxError",
-    "isTypeError",
-    "isUint16Array",
-    "isUint32Array",
-    "isUint8Array",
-    "isUint8ClampedArray",
-    "isURIError",
-    "isWeakMap",
-    "isWeakRef",
-    "isUndefined",
-    "isArguments",
-  ] as const;
+  const obj = {} as TupleToObject<typeof typeList, (arg: any) => boolean>;
 
-  const obj = {} as TupleToObject<typeof types, (arg: any) => boolean>;
-
-  types.forEach((item) => {
+  typeList.forEach((item) => {
     obj[item] = function (v) {
       const typeStr = Object.prototype.toString.call(v).slice(8, -1);
       return item.slice(2) === typeStr;
@@ -54,3 +16,16 @@ export const dataTypes = (function () {
 
   return obj;
 })();
+
+/** obtain the string form of the data type */
+export const typeString = (v: unknown, capitalized = true) => {
+  const s = Object.prototype.toString.call(v).slice(8, -1);
+  if (capitalized) return s;
+
+  return s.toLocaleLowerCase();
+};
+
+/** determine whether the data types are equal */
+export const isSameType = (v: unknown, k: unknown) => {
+  return typeString(v) === typeString(k);
+};

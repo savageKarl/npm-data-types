@@ -1,1 +1,1 @@
-export { dataTypes } from "./dataTypes";
+export * from "./dataTypes";
