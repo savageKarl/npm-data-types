@@ -1,6 +1,6 @@
 {
   "name": "savage-data-types",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "一个用于判断js变量类型的库",
   "main": "dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -8,20 +8,20 @@
   "files": [
     "dist/index.cjs",
     "dist/index.mjs",
-    "dist/index.d.ts",
+    "dist/main.d.ts",
     "dist/index.cjs.map",
     "dist/index.mjs.map"
   ],
-  "types": "./dist/index.d.ts",
+  "types": "./dist/main.d.ts",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "type": "module",
   "scripts": {
-    "dev": "cross-env mode=dev rollup -c rollup.config.js --watch",
+    "dev": "cross-env mode=dev nodemon rollup.config.js",
     "build": "cross-env mode=pro rollup -c rollup.config.js",
-    "push": "npm publish --access public"
+    "publish": "npm publish --access public"
   },
   "author": {
     "name": "savage",
@@ -39,18 +39,6 @@
   },
   "license": "GPL-3.0",
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-terser": "^0.4.3",
-    "cross-env": "^7.0.3",
-    "rollup": "^3.2.3",
-    "rollup-obfuscator": "^4.0.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-delete": "^2.0.0",
-    "rollup-plugin-dts": "^6.0.0",
-    "rollup-plugin-javascript-obfuscator": "^1.0.4",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.34.1",
-    "rollup-plugin-uglify": "^6.0.4",
-    "typescript": "^4.8.4"
+    "savage-rollup-config": "^0.0.11"
   }
 }
