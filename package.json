@@ -1,6 +1,6 @@
 {
   "name": "savage-data-types",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "一个用于判断js变量类型的库",
   "main": "dist/index.cjs",
   "module": "./dist/index.mjs",
