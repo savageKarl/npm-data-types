@@ -21,7 +21,15 @@
   "scripts": {
     "dev": "cross-env mode=dev nodemon rollup.config.js",
     "build": "cross-env mode=pro rollup -c rollup.config.js",
-    "publish": "npm publish --access public"
+    "prepush": "npm run build",
+    "push": "npm publish --access public",
+    "lint": "eslint .",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "author": {
     "name": "savage",
@@ -39,6 +47,6 @@
   },
   "license": "GPL-3.0",
   "devDependencies": {
-    "savage-rollup-config": "^0.0.11"
+    "savage-rollup-config": "^0.0.13"
   }
 }
