@@ -47,6 +47,6 @@
   },
   "license": "GPL-3.0",
   "devDependencies": {
-    "savage-rollup-config": "^0.0.13"
+    "savage-rollup-config": "^0.0.14"
   }
 }
