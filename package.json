@@ -1,6 +1,6 @@
 {
 	"name": "savage-data-types",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"description": "一个用于判断js变量类型的库",
 	"main": "dist/index.cjs",
 	"module": "./dist/index.mjs",
@@ -24,7 +24,8 @@
 		"prepush": "npm run build",
 		"push": "npm publish --access public",
 		"lint": "eslint .",
-		"commit": "git-cz"
+		"commit": "git-cz",
+		"prepare": "husky install"
 	},
 	"config": {
 		"commitizen": {
