@@ -5,11 +5,12 @@ import apidocConfig from '../apidocConfig.json'
 import pkg from '../../package.json'
 
 const name = pkg.name
+const path = name.replace(/([a-z]+-)/, 'npm-')
 
 export default defineConfig({
-	base: `/npm-data-types/`,
+	base: `/${path}/`,
 	title: `${name}`,
-	head: [[`link`, { rel: `icon`, href: `/${name}/savage.ico` }]],
+	head: [[`link`, { rel: `icon`, href: `/${path}/savage.ico` }]],
 	themeConfig: {
 		logo: {
 			src: '/savage.png',
